@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CA2213: "ControllerMainForm" содержит поле "view", которое имеет тип IDisposable "View", но никогда не удаляется. Измените метод Dispose для "ControllerMainForm" на вызов Close или Dispose для этого поля.
+dotnet_diagnostic.CA2213.severity = silent
