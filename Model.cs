@@ -116,6 +116,7 @@ namespace Pacman
             foreach (FireTank ft in fireTanks)
                 ft.Fire();
         }
+
         /// <summary>
         /// Метод создаёт модели танков
         /// </summary>
@@ -143,6 +144,7 @@ namespace Pacman
                     tanks.Add(new Tank(sizeField, x, y));
             }
         }
+
         /// <summary>
         /// Метод обрабатывающий уничтожение танка
         /// </summary>
@@ -157,6 +159,7 @@ namespace Pacman
                     rocket.DefaultRocket();
                 }
         }
+
         /// <summary>
         /// Метод создаёт модели яблок
         /// </summary>
@@ -164,6 +167,7 @@ namespace Pacman
         {
             CreateApples(0);
         }
+
         /// <summary>
         /// Метод создаёт модели яблок
         /// </summary>
@@ -188,6 +192,7 @@ namespace Pacman
                     apples.Add(new Apple(x, y));
             }
         }
+
         /// <summary>
         /// Метод проверяет столкновение танков друг с другом
         /// </summary>
@@ -210,6 +215,7 @@ namespace Pacman
                         tanks[j].TurnAround();
                     }
         }
+
         /// <summary>
         /// Метод проверяет поедание Пакмэном яблок
         /// </summary>
@@ -224,6 +230,7 @@ namespace Pacman
                 }
             }
         }
+
         /// <summary>
         /// Метод проверяет столкновение Пакмэна с танком
         /// </summary>
