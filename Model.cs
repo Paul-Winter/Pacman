@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
+using System.Collections.Generic;
 
 namespace Pacman
 {
@@ -24,6 +22,9 @@ namespace Pacman
 
             NewGame();
         }
+        /// <summary>
+        /// Метод запускает игру
+        /// </summary>
         public void Play()
         {
             while (gameStatus == GameStatus.playing)
@@ -66,6 +67,9 @@ namespace Pacman
         {
             get { return fireTanks; }
         }
+        /// <summary>
+        /// Метод запускает новый раунд игры
+        /// </summary>
         internal void NewGame()
         {
             collectedApples = 0;
@@ -95,6 +99,11 @@ namespace Pacman
         List<Tank> tanks;
         List<Apple> apples;
         List<FireTank> fireTanks;
+
+
+        /// <summary>
+        /// Метод приводит в движение все модели
+        /// </summary>
         void RunAll()
         {
             pacman.Run();
@@ -107,6 +116,9 @@ namespace Pacman
             foreach (FireTank ft in fireTanks)
                 ft.Fire();
         }
+        /// <summary>
+        /// Метод создаёт модели танков
+        /// </summary>
         void CreateTanks()
         {
             int x, y;
@@ -131,6 +143,9 @@ namespace Pacman
                     tanks.Add(new Tank(sizeField, x, y));
             }
         }
+        /// <summary>
+        /// Метод обрабатывающий уничтожение танка
+        /// </summary>
         void DestroyTank()
         {
             for (int i = 1; i < tanks.Count; i++)
@@ -142,10 +157,17 @@ namespace Pacman
                     rocket.DefaultRocket();
                 }
         }
+        /// <summary>
+        /// Метод создаёт модели яблок
+        /// </summary>
         void CreateApples()
         {
             CreateApples(0);
         }
+        /// <summary>
+        /// Метод создаёт модели яблок
+        /// </summary>
+        /// <param name="newApples"></param>
         void CreateApples(int newApples) 
         {
             int x, y;
@@ -166,6 +188,9 @@ namespace Pacman
                     apples.Add(new Apple(x, y));
             }
         }
+        /// <summary>
+        /// Метод проверяет столкновение танков друг с другом
+        /// </summary>
         void IfCollisionTank()
         {
             for (int i = 0; i < tanks.Count - 1; i++)
@@ -185,6 +210,9 @@ namespace Pacman
                         tanks[j].TurnAround();
                     }
         }
+        /// <summary>
+        /// Метод проверяет поедание Пакмэном яблок
+        /// </summary>
         void IfPickApple()
         {
             for (int i = 0; i < apples.Count; i++)
@@ -196,6 +224,9 @@ namespace Pacman
                 }
             }
         }
+        /// <summary>
+        /// Метод проверяет столкновение Пакмэна с танком
+        /// </summary>
         void IfCollisionPacman()
         {
             for (int i = 0; i < tanks.Count; i++)
