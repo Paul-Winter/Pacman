@@ -11,6 +11,7 @@ namespace Pacman
         public int speedGame;
         public int AmountTanks { get => amountTanks; set => amountTanks = value; }
         public int AmountApples { get => amountApples; set => amountApples = value; }
+        public int CollectedApples { get => collectedApples; set => collectedApples = value; }
         public Wall wall;
         public GameStatus gameStatus;
         public Model(int sizeField, int amountTanks, int amountApples, int speedGame)
@@ -40,7 +41,7 @@ namespace Pacman
                 IfCollisionPacman();
                 IfPickApple();
 
-                if (collectedApples >= AmountApples)
+                if (CollectedApples >= AmountApples)
                 {
                     gameStatus = GameStatus.winner;
                     if (ChangeStrip != null)
@@ -69,13 +70,15 @@ namespace Pacman
         internal List<FireTank> FireTanks
         {
             get { return fireTanks; }
-        } 
+        }
+
+
         /// <summary>
         /// Метод запускает новый раунд игры
         /// </summary>
         internal void NewGame()
         {
-            collectedApples = 0;
+            CollectedApples = 0;
             step = -30;
             pacman = new Pacman(sizeField);
             rocket = new Rocket();
@@ -229,7 +232,7 @@ namespace Pacman
                 if ((Math.Abs(pacman.X - apples[i].X) < 2) && (Math.Abs(pacman.Y - apples[i].Y) < 2))
                 {
                     apples[i] = new Apple(step += 30, 280);
-                    CreateApples(++collectedApples);
+                    CreateApples(++CollectedApples);
                 }
             }
         }

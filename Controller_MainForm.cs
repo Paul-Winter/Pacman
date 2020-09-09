@@ -24,7 +24,7 @@ namespace Pacman
 
             isSound = true;
 
-            Sp = new SoundPlayer(Properties.Resources.the_mandalorian_08___The_Mandalorian__online_audio_converter_com_);
+            Sp = new SoundPlayer(Properties.Resources.mgnoveniya);
         }
 
 
@@ -177,5 +177,23 @@ namespace Pacman
 
         internal View View { get => view; set => view = value; }
         public SoundPlayer Sp { get => sp; set => sp = value; }
+
+        private void tscbApplesAmount_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tscbApplesAmount.DropDownStyle = ComboBoxStyle.DropDownList;
+            model.AmountApples = Convert.ToInt32(tscbApplesAmount.Text);
+        }
+
+        private void tscbTanksAmount_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tscbTanksAmount.DropDownStyle = ComboBoxStyle.DropDownList;
+            model.AmountTanks = Convert.ToInt32(tscbTanksAmount.Text);
+        }
+
+        private void tscbApplesCollected_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tscbApplesCollected.DropDownStyle = ComboBoxStyle.DropDownList;
+            model.CollectedApples = Convert.ToInt32(tscbApplesCollected.Text);
+        }
     }
 }

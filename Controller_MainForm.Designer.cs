@@ -40,12 +40,13 @@
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.soundToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tscbApplesAmount = new System.Windows.Forms.ToolStripComboBox();
+            this.tscbTanksAmount = new System.Windows.Forms.ToolStripComboBox();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.GameStatus_lbl_st_strp = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tscbApples = new System.Windows.Forms.ToolStripComboBox();
-            this.tscbTanks = new System.Windows.Forms.ToolStripComboBox();
+            this.tscbApplesCollected = new System.Windows.Forms.ToolStripComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.StartPause_pcbx)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -98,20 +99,20 @@
             // 
             this.newGameToolStripMenuItem.Image = global::Pacman.Properties.Resources.Pacman10;
             this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
-            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.newGameToolStripMenuItem.Text = "&New game";
             this.newGameToolStripMenuItem.Click += new System.EventHandler(this.NewGameToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(128, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Image = global::Pacman.Properties.Resources.Hunter10;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.exitToolStripMenuItem.Text = "&Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -120,8 +121,9 @@
             this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.soundToolStripMenuItem,
             this.toolStripSeparator2,
-            this.tscbApples,
-            this.tscbTanks});
+            this.tscbApplesAmount,
+            this.tscbTanksAmount,
+            this.tscbApplesCollected});
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.settingsToolStripMenuItem.Text = "&Settings";
@@ -139,6 +141,38 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(178, 6);
             // 
+            // tscbApplesAmount
+            // 
+            this.tscbApplesAmount.Items.AddRange(new object[] {
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.tscbApplesAmount.Name = "tscbApplesAmount";
+            this.tscbApplesAmount.Size = new System.Drawing.Size(121, 23);
+            this.tscbApplesAmount.Text = "Apples";
+            this.tscbApplesAmount.SelectedIndexChanged += new System.EventHandler(this.tscbApplesAmount_SelectedIndexChanged);
+            // 
+            // tscbTanksAmount
+            // 
+            this.tscbTanksAmount.Items.AddRange(new object[] {
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.tscbTanksAmount.Name = "tscbTanksAmount";
+            this.tscbTanksAmount.Size = new System.Drawing.Size(121, 23);
+            this.tscbTanksAmount.Text = "Tanks";
+            this.tscbTanksAmount.SelectedIndexChanged += new System.EventHandler(this.tscbTanksAmount_SelectedIndexChanged);
+            // 
             // infoToolStripMenuItem
             // 
             this.infoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -151,7 +185,7 @@
             // 
             this.aboutToolStripMenuItem.Image = global::Pacman.Properties.Resources.Rocket10;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "&About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
@@ -172,9 +206,11 @@
             this.GameStatus_lbl_st_strp.Name = "GameStatus_lbl_st_strp";
             this.GameStatus_lbl_st_strp.Size = new System.Drawing.Size(0, 17);
             // 
-            // tscbApples
+            // tscbApplesCollected
             // 
-            this.tscbApples.Items.AddRange(new object[] {
+            this.tscbApplesCollected.Items.AddRange(new object[] {
+            "1",
+            "2",
             "3",
             "4",
             "5",
@@ -183,24 +219,10 @@
             "8",
             "9",
             "10"});
-            this.tscbApples.Name = "tscbApples";
-            this.tscbApples.Size = new System.Drawing.Size(121, 23);
-            this.tscbApples.Text = "Apples";
-            // 
-            // tscbTanks
-            // 
-            this.tscbTanks.Items.AddRange(new object[] {
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"});
-            this.tscbTanks.Name = "tscbTanks";
-            this.tscbTanks.Size = new System.Drawing.Size(121, 23);
-            this.tscbTanks.Text = "Tanks";
+            this.tscbApplesCollected.Name = "tscbApplesCollected";
+            this.tscbApplesCollected.Size = new System.Drawing.Size(121, 23);
+            this.tscbApplesCollected.Text = "Apples Collect";
+            this.tscbApplesCollected.SelectedIndexChanged += new System.EventHandler(this.tscbApplesCollected_SelectedIndexChanged);
             // 
             // ControllerMainForm
             // 
@@ -245,8 +267,9 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel GameStatus_lbl_st_strp;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripComboBox tscbApples;
-        private System.Windows.Forms.ToolStripComboBox tscbTanks;
+        private System.Windows.Forms.ToolStripComboBox tscbApplesAmount;
+        private System.Windows.Forms.ToolStripComboBox tscbTanksAmount;
+        private System.Windows.Forms.ToolStripComboBox tscbApplesCollected;
     }
 }
 
