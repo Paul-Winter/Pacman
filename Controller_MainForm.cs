@@ -2,7 +2,6 @@
 using System.Threading;
 using System.Windows.Forms;
 using System.Media;
-using System.Resources;
 
 [assembly: CLSCompliant(false)]
 namespace Pacman
@@ -124,6 +123,11 @@ namespace Pacman
             else
                 e.Cancel = true;
         }
+        /// <summary>
+        /// Метод управления пакмэном с клавиатуры
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void StartPause_pcbx_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             switch (e.KeyData.ToString())
