@@ -46,6 +46,10 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.GameStatus_lbl_st_strp = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tstbApplesAmount = new System.Windows.Forms.ToolStripTextBox();
+            this.tstbTanksAmount = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.tstbTanks = new System.Windows.Forms.ToolStripTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.StartPause_pcbx)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -120,7 +124,10 @@
             this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.soundToolStripMenuItem,
             this.toolStripSeparator2,
+            this.tstbApplesAmount,
             this.tscbApplesAmount,
+            this.toolStripSeparator3,
+            this.tstbTanks,
             this.tscbTanksAmount});
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
@@ -152,7 +159,7 @@
             "10"});
             this.tscbApplesAmount.Name = "tscbApplesAmount";
             this.tscbApplesAmount.Size = new System.Drawing.Size(121, 23);
-            this.tscbApplesAmount.Text = "Apples";
+            this.tscbApplesAmount.Text = "5";
             this.tscbApplesAmount.SelectedIndexChanged += new System.EventHandler(this.tscbApplesAmount_SelectedIndexChanged);
             // 
             // tscbTanksAmount
@@ -168,7 +175,7 @@
             "10"});
             this.tscbTanksAmount.Name = "tscbTanksAmount";
             this.tscbTanksAmount.Size = new System.Drawing.Size(121, 23);
-            this.tscbTanksAmount.Text = "Tanks";
+            this.tscbTanksAmount.Text = "5";
             this.tscbTanksAmount.SelectedIndexChanged += new System.EventHandler(this.tscbTanksAmount_SelectedIndexChanged);
             // 
             // infoToolStripMenuItem
@@ -203,6 +210,31 @@
             this.GameStatus_lbl_st_strp.BackColor = System.Drawing.Color.Silver;
             this.GameStatus_lbl_st_strp.Name = "GameStatus_lbl_st_strp";
             this.GameStatus_lbl_st_strp.Size = new System.Drawing.Size(0, 17);
+            // 
+            // tstbApplesAmount
+            // 
+            this.tstbApplesAmount.Name = "tstbApplesAmount";
+            this.tstbApplesAmount.ReadOnly = true;
+            this.tstbApplesAmount.Size = new System.Drawing.Size(100, 23);
+            this.tstbApplesAmount.Text = "Apples";
+            // 
+            // tstbTanksAmount
+            // 
+            this.tstbTanksAmount.Name = "tstbTanksAmount";
+            this.tstbTanksAmount.Size = new System.Drawing.Size(100, 23);
+            this.tstbTanksAmount.Text = "Tanks";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(178, 6);
+            // 
+            // tstbTanks
+            // 
+            this.tstbTanks.Name = "tstbTanks";
+            this.tstbTanks.ReadOnly = true;
+            this.tstbTanks.Size = new System.Drawing.Size(100, 23);
+            this.tstbTanks.Text = "Tanks";
             // 
             // ControllerMainForm
             // 
@@ -249,6 +281,10 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripComboBox tscbApplesAmount;
         private System.Windows.Forms.ToolStripComboBox tscbTanksAmount;
+        private System.Windows.Forms.ToolStripTextBox tstbApplesAmount;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripTextBox tstbTanksAmount;
+        private System.Windows.Forms.ToolStripTextBox tstbTanks;
     }
 }
 
