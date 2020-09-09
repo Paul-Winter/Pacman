@@ -44,6 +44,8 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.GameStatus_lbl_st_strp = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tscbApples = new System.Windows.Forms.ToolStripComboBox();
+            this.tscbTanks = new System.Windows.Forms.ToolStripComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.StartPause_pcbx)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -96,20 +98,20 @@
             // 
             this.newGameToolStripMenuItem.Image = global::Pacman.Properties.Resources.Pacman10;
             this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
-            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newGameToolStripMenuItem.Text = "&New game";
             this.newGameToolStripMenuItem.Click += new System.EventHandler(this.NewGameToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(128, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Image = global::Pacman.Properties.Resources.Hunter10;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "&Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -117,7 +119,9 @@
             // 
             this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.soundToolStripMenuItem,
-            this.toolStripSeparator2});
+            this.toolStripSeparator2,
+            this.tscbApples,
+            this.tscbTanks});
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.settingsToolStripMenuItem.Text = "&Settings";
@@ -126,14 +130,14 @@
             // 
             this.soundToolStripMenuItem.Image = global::Pacman.Properties.Resources.Apple;
             this.soundToolStripMenuItem.Name = "soundToolStripMenuItem";
-            this.soundToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.soundToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.soundToolStripMenuItem.Text = "&Sound";
             this.soundToolStripMenuItem.Click += new System.EventHandler(this.SoundToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(178, 6);
             // 
             // infoToolStripMenuItem
             // 
@@ -147,7 +151,7 @@
             // 
             this.aboutToolStripMenuItem.Image = global::Pacman.Properties.Resources.Rocket10;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "&About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
@@ -167,6 +171,36 @@
             this.GameStatus_lbl_st_strp.BackColor = System.Drawing.Color.Silver;
             this.GameStatus_lbl_st_strp.Name = "GameStatus_lbl_st_strp";
             this.GameStatus_lbl_st_strp.Size = new System.Drawing.Size(0, 17);
+            // 
+            // tscbApples
+            // 
+            this.tscbApples.Items.AddRange(new object[] {
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.tscbApples.Name = "tscbApples";
+            this.tscbApples.Size = new System.Drawing.Size(121, 23);
+            this.tscbApples.Text = "Apples";
+            // 
+            // tscbTanks
+            // 
+            this.tscbTanks.Items.AddRange(new object[] {
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.tscbTanks.Name = "tscbTanks";
+            this.tscbTanks.Size = new System.Drawing.Size(121, 23);
+            this.tscbTanks.Text = "Tanks";
             // 
             // ControllerMainForm
             // 
@@ -211,6 +245,8 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel GameStatus_lbl_st_strp;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripComboBox tscbApples;
+        private System.Windows.Forms.ToolStripComboBox tscbTanks;
     }
 }
 

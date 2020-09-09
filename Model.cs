@@ -9,6 +9,8 @@ namespace Pacman
     {
         public event STRIP ChangeStrip;
         public int speedGame;
+        public int AmountTanks { get => amountTanks; set => amountTanks = value; }
+        public int AmountApples { get => amountApples; set => amountApples = value; }
         public Wall wall;
         public GameStatus gameStatus;
         public Model(int sizeField, int amountTanks, int amountApples, int speedGame)
@@ -16,12 +18,13 @@ namespace Pacman
             r = new Random();
             
             this.sizeField = sizeField;
-            this.amountTanks = amountTanks;
-            this.amountApples = amountApples;
+            this.AmountTanks = amountTanks;
+            this.AmountApples = amountApples;
             this.speedGame = speedGame;
 
             NewGame();
         }
+
         /// <summary>
         /// Метод запускает игру
         /// </summary>
@@ -37,7 +40,7 @@ namespace Pacman
                 IfCollisionPacman();
                 IfPickApple();
 
-                if (collectedApples >= amountApples)
+                if (collectedApples >= AmountApples)
                 {
                     gameStatus = GameStatus.winner;
                     if (ChangeStrip != null)
@@ -66,7 +69,7 @@ namespace Pacman
         internal List<FireTank> FireTanks
         {
             get { return fireTanks; }
-        }
+        } 
         /// <summary>
         /// Метод запускает новый раунд игры
         /// </summary>
@@ -123,7 +126,7 @@ namespace Pacman
         void CreateTanks()
         {
             int x, y;
-            while(tanks.Count < amountTanks + 1)
+            while(tanks.Count < AmountTanks + 1)
             {
                 if (tanks.Count == 0)
                     tanks.Add(new Hunter(sizeField, r.Next(7) * 40, r.Next(4) * 40));
@@ -175,7 +178,7 @@ namespace Pacman
         void CreateApples(int newApples) 
         {
             int x, y;
-            while (apples.Count < (amountApples + newApples))
+            while (apples.Count < (AmountApples + newApples))
             {
                 x = r.Next(1, 7) * 40;
                 y = r.Next(1, 7) * 40;
