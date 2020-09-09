@@ -66,7 +66,6 @@
             this.StartPause_pcbx.TabStop = false;
             this.Help_ttip.SetToolTip(this.StartPause_pcbx, "Click the button to start or pause game");
             this.StartPause_pcbx.Click += new System.EventHandler(this.StartPause_btn_Click);
-            this.StartPause_pcbx.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.StartPause_pcbx_PreviewKeyDown);
             // 
             // Help_ttip
             // 

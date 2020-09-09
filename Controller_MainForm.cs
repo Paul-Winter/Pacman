@@ -93,7 +93,7 @@ namespace Pacman
         }
         void AboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Game \"Pacman VS Tanks\"\nversion 1.0\nCreated by Paul Winter\n\nPlease WASD to control Pacman\nPress SPACE to attak with rocket", "Pacman VS Tanks", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
+            MessageBox.Show("Game \"Pacman VS Tanks\"\nversion 1.1\nCreated by Paul Winter\n\nPlease press ARROWs to control Pacman\nPress SPACE to attak with rocket", "Pacman VS Tanks", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
         }
         void SoundToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -128,44 +128,45 @@ namespace Pacman
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        void StartPause_pcbx_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
-            switch (e.KeyData.ToString())
+            switch (keyData)
             {
-                case "A":
+                case Keys.Left:
                     {
                         model.Pacman.NextDirect_x = -1;
                         model.Pacman.NextDirect_y = 0;
                     }
                     break;
 
-                case "D":
+                case Keys.Right:
                     {
                         model.Pacman.NextDirect_x = 1;
                         model.Pacman.NextDirect_y = 0;
                     }
                     break;
 
-                case "W":
+                case Keys.Up:
                     {
                         model.Pacman.NextDirect_x = 0;
                         model.Pacman.NextDirect_y = -1;
                     }
                     break;
 
-                case "S":
+                case Keys.Down:
                     {
                         model.Pacman.NextDirect_x = 0;
                         model.Pacman.NextDirect_y = 1;
                     }
                     break;
 
-                default:
+                case Keys.Space:
                     {
                         SetRocketStart();
                     }
                     break;
-            } 
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
 
 
@@ -183,7 +184,6 @@ namespace Pacman
             tscbApplesAmount.DropDownStyle = ComboBoxStyle.DropDownList;
             model.AmountApples = Convert.ToInt32(tscbApplesAmount.Text);
         }
-
         private void tscbTanksAmount_SelectedIndexChanged(object sender, EventArgs e)
         {
             tscbTanksAmount.DropDownStyle = ComboBoxStyle.DropDownList;
