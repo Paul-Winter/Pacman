@@ -189,11 +189,5 @@ namespace Pacman
             tscbTanksAmount.DropDownStyle = ComboBoxStyle.DropDownList;
             model.AmountTanks = Convert.ToInt32(tscbTanksAmount.Text);
         }
-
-        private void tscbApplesCollected_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            tscbApplesCollected.DropDownStyle = ComboBoxStyle.DropDownList;
-            model.CollectedApples = Convert.ToInt32(tscbApplesCollected.Text);
-        }
     }
 }

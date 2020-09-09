@@ -61,15 +61,6 @@ namespace Pacman.Properties {
         }
         
         /// <summary>
-        ///   Поиск локализованного ресурса типа System.IO.UnmanagedMemoryStream, аналогичного System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream _00771__online_audio_converter_com_ {
-            get {
-                return ResourceManager.GetStream("_00771__online_audio_converter_com_", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Apple {
@@ -875,15 +866,6 @@ namespace Pacman.Properties {
             get {
                 object obj = ResourceManager.GetObject("Tank10II", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.IO.UnmanagedMemoryStream, аналогичного System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream the_mandalorian_08___The_Mandalorian__online_audio_converter_com_ {
-            get {
-                return ResourceManager.GetStream("the_mandalorian_08___The_Mandalorian__online_audio_converter_com_", resourceCulture);
             }
         }
         

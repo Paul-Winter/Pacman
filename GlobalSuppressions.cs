@@ -11,3 +11,7 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Style", "IDE1005:Вызов делегата можно упростить.", Justification = "<Ожидание>", Scope = "member", Target = "~M:Pacman.Model.Play")]
 [assembly: SuppressMessage("Style", "IDE1005:Вызов делегата можно упростить.", Justification = "<Ожидание>", Scope = "member", Target = "~M:Pacman.Model.IfCollisionPacman")]
 [assembly: SuppressMessage("Style", "IDE0059:Ненужное присваивание значения", Justification = "<Ожидание>", Scope = "member", Target = "~M:Pacman.View.DrawWall(System.Windows.Forms.PaintEventArgs)")]
+[assembly: SuppressMessage("Globalization", "CA1305:Укажите IFormatProvider", Justification = "<Ожидание>", Scope = "member", Target = "~M:Pacman.ControllerMainForm.tscbApplesAmount_SelectedIndexChanged(System.Object,System.EventArgs)")]
+[assembly: SuppressMessage("Globalization", "CA1305:Укажите IFormatProvider", Justification = "<Ожидание>", Scope = "member", Target = "~M:Pacman.ControllerMainForm.tscbTanksAmount_SelectedIndexChanged(System.Object,System.EventArgs)")]
+[assembly: SuppressMessage("Style", "IDE1006:Стили именования", Justification = "<Ожидание>", Scope = "member", Target = "~M:Pacman.ControllerMainForm.tscbApplesAmount_SelectedIndexChanged(System.Object,System.EventArgs)")]
+[assembly: SuppressMessage("Style", "IDE1006:Стили именования", Justification = "<Ожидание>", Scope = "member", Target = "~M:Pacman.ControllerMainForm.tscbTanksAmount_SelectedIndexChanged(System.Object,System.EventArgs)")]

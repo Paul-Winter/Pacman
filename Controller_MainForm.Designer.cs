@@ -46,7 +46,6 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.GameStatus_lbl_st_strp = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tscbApplesCollected = new System.Windows.Forms.ToolStripComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.StartPause_pcbx)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -122,8 +121,7 @@
             this.soundToolStripMenuItem,
             this.toolStripSeparator2,
             this.tscbApplesAmount,
-            this.tscbTanksAmount,
-            this.tscbApplesCollected});
+            this.tscbTanksAmount});
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.settingsToolStripMenuItem.Text = "&Settings";
@@ -206,24 +204,6 @@
             this.GameStatus_lbl_st_strp.Name = "GameStatus_lbl_st_strp";
             this.GameStatus_lbl_st_strp.Size = new System.Drawing.Size(0, 17);
             // 
-            // tscbApplesCollected
-            // 
-            this.tscbApplesCollected.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"});
-            this.tscbApplesCollected.Name = "tscbApplesCollected";
-            this.tscbApplesCollected.Size = new System.Drawing.Size(121, 23);
-            this.tscbApplesCollected.Text = "Apples Collect";
-            this.tscbApplesCollected.SelectedIndexChanged += new System.EventHandler(this.tscbApplesCollected_SelectedIndexChanged);
-            // 
             // ControllerMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,7 +249,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripComboBox tscbApplesAmount;
         private System.Windows.Forms.ToolStripComboBox tscbTanksAmount;
-        private System.Windows.Forms.ToolStripComboBox tscbApplesCollected;
     }
 }
 
